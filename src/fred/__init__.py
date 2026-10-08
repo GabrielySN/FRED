@@ -91,7 +91,7 @@ def executar_comando(comando):
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
-        elif "encerrar programa" in comando or "desligar assistente" in comando:
+        elif "encerrar programa" in comando or "desligar" in comando:
             print("👋 Encerrando...")
             sys.exit()
 
