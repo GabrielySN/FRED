@@ -80,7 +80,20 @@ def executar_comando(comando):
             # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
             texto_para_digitar = comando.replace("escrever", "").strip()
             teclado.type(texto_para_digitar)
-            
+
+        elif "apagar tudo" in comando:
+                    
+                    with teclado.pressed(Key.ctrl):
+                        teclado.press('a')
+                        teclado.release('a')
+                    time.sleep(0.1)  
+                    teclado.press(Key.backspace)
+                    teclado.release(Key.backspace)
+                    
+        elif "apagar" in comando:
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
+
         elif "aumentar volume" in comando:
             os.system("amixer set Master 10%+")
             
@@ -116,6 +129,19 @@ def executar_comando(comando):
         elif "escribir" in comando:
             texto_para_digitar = comando.replace("escribir", "").strip()
             teclado.type(texto_para_digitar)
+
+        elif "borrar todo" in comando:
+                            
+                            with teclado.pressed(Key.ctrl):
+                                teclado.press('a')
+                                teclado.release('a')
+                            time.sleep(0.1)  
+                            teclado.press(Key.backspace)
+                            teclado.release(Key.backspace)
+
+        elif "borrar" in comando:
+                    teclado.press(Key.backspace)
+                    teclado.release(Key.backspace)
             
         elif "subir volumen" in comando:
             os.system("amixer set Master 10%+")
