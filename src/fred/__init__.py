@@ -45,9 +45,9 @@ def executar_comando(comando):
     if not comando:
         return
 
-    # ==========================================
+
     # 🔄 ALTERNÂNCIA DE IDIOMA POR VOZ
-    # ==========================================
+
     if "mudar para espanhol" in comando or "cambiar a español" in comando:
         idioma_atual = 'es-ES'
         print("🇨🇱🇪🇸 Idioma alterado para ESPANHOL.")
@@ -58,9 +58,9 @@ def executar_comando(comando):
         print("🇧🇷🇵🇹 Idioma alterado para PORTUGUÊS.")
         return
 
-    # ==========================================
+
     # 🇧🇷 COMANDOS EM PORTUGUÊS
-    # ==========================================
+
     if idioma_atual == 'pt-BR':
         
         if "abrir navegador" in comando or "abrir google" in comando:
@@ -100,7 +100,7 @@ def executar_comando(comando):
         elif "diminuir volume" in comando:
             os.system("amixer set Master 10%-")
             
-        elif "dar enter" in comando or "confirmar" in comando:
+        elif "confirmar" in comando:
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
@@ -108,9 +108,8 @@ def executar_comando(comando):
             print("👋 Encerrando...")
             sys.exit()
 
-    # ==========================================
     # 🇪🇸 COMANDOS EM ESPANHOL
-    # ==========================================
+  
     elif idioma_atual == 'es-ES':
         
         if "abrir navegador" in comando or "abrir internet" in comando:
@@ -149,7 +148,7 @@ def executar_comando(comando):
         elif "bajar volumen" in comando:
             os.system("amixer set Master 10%-")
             
-        elif "presionar enter" in comando or "aceptar" in comando:
+        elif "aceptar" in comando:
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
