@@ -81,18 +81,46 @@ def executar_comando(comando):
             texto_para_digitar = comando.replace("escrever", "").strip()
             teclado.type(texto_para_digitar)
 
+        elif "copie" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('c')
+                teclado.release('c')
+        
+        elif "cole" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('v')
+                teclado.release('v')
+        
+        elif "va para esquerda" in comando:
+            teclado.press(Key.left)
+            teclado.release(Key.left) 
+        
+        elif "va para direita" in comando:
+            teclado.press(Key.right)
+            teclado.release(Key.right)
+        
+        elif "va para baixo" in comando:
+            teclado.press(Key.down)
+            teclado.release(Key.down)
+        
+        elif "va para cima" in comando:
+                teclado.press(Key.up)
+                teclado.release(Key.up)
+
         elif "apagar tudo" in comando:
                     
-                    with teclado.pressed(Key.ctrl):
-                        teclado.press('a')
-                        teclado.release('a')
-                    time.sleep(0.1)  
-                    teclado.press(Key.backspace)
-                    teclado.release(Key.backspace)
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+            time.sleep(0.1)  
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
                     
         elif "apagar" in comando:
             teclado.press(Key.backspace)
             teclado.release(Key.backspace)
+
+        elif "desfazer" in comando:
 
         elif "aumentar volume" in comando:
             os.system("amixer set Master 10%+")
@@ -129,14 +157,40 @@ def executar_comando(comando):
             texto_para_digitar = comando.replace("escribir", "").strip()
             teclado.type(texto_para_digitar)
 
+        elif "copie" in comando:
+             with teclado.pressed(Key.ctrl):
+                teclado.press('c')
+                teclado.release('c')
+
+        elif "cole" in comando:
+                 with teclado.pressed(Key.ctrl):
+                    teclado.press('v')
+                    teclado.release('v')
+
+        elif "va para esquerda" in comando:
+             teclado.press(Key.left)
+             teclado.release(Key.left) 
+
+        elif "va para direita" in comando:
+                     teclado.press(Key.right)
+                     teclado.release(Key.right)
+
+        elif "va para baixo" in comando:
+                     teclado.press(Key.down)
+                     teclado.release(Key.down)
+
+        elif "va para cima" in comando:
+                     teclado.press(Key.up)
+                     teclado.release(Key.up)
+
         elif "borrar todo" in comando:
                             
-                            with teclado.pressed(Key.ctrl):
-                                teclado.press('a')
-                                teclado.release('a')
-                            time.sleep(0.1)  
-                            teclado.press(Key.backspace)
-                            teclado.release(Key.backspace)
+                        with teclado.pressed(Key.ctrl):
+                            teclado.press('a')
+                            teclado.release('a')
+                        time.sleep(0.1)  
+                        teclado.press(Key.backspace)
+                        teclado.release(Key.backspace)
 
         elif "borrar" in comando:
                     teclado.press(Key.backspace)
