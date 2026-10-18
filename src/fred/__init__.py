@@ -62,10 +62,31 @@ def executar_comando(comando):
     # 🇧🇷 COMANDOS EM PORTUGUÊS
 
     if idioma_atual == 'pt-BR':
-        
+        #comandos do google:
         if "abrir navegador" in comando or "abrir google" in comando:
             os.system("xdg-open https://google.com &")
-            
+
+        elif "nova aba" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('t')
+                  teclado.release('t')
+
+        elif "fechar aba" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('w')
+                  teclado.release('w')
+
+        elif "reabrir aba" in comando:
+             with teclado.pressed(Key.ctrl, Key.shift):
+                  teclado.press('t')
+                  teclado.release('t')
+
+        elif "proxima guia" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('tab')
+                  teclado.release('tab')
+
+        #comando gerais do computador:    
         elif "abrir terminal" in comando or "abrir comandos" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press('t')
@@ -81,12 +102,12 @@ def executar_comando(comando):
             texto_para_digitar = comando.replace("escrever", "").strip()
             teclado.type(texto_para_digitar)
 
-        elif "copie" in comando:
+        elif "copiar" in comando:
             with teclado.pressed(Key.ctrl):
                 teclado.press('c')
                 teclado.release('c')
         
-        elif "cole" in comando:
+        elif "colar" in comando:
             with teclado.pressed(Key.ctrl):
                 teclado.press('v')
                 teclado.release('v')
@@ -121,7 +142,20 @@ def executar_comando(comando):
             teclado.release(Key.backspace)
 
         elif "desfazer" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('z')
+                  teclado.release('z')
 
+        elif "refazer" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('y')
+                  teclado.release('y')
+
+        elif "selecionar tudo" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('a')
+                  teclado.release('a')
+    
         elif "aumentar volume" in comando:
             os.system("amixer set Master 10%+")
             
