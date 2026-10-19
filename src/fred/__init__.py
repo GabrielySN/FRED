@@ -86,6 +86,17 @@ def executar_comando(comando):
                   teclado.press('tab')
                   teclado.release('tab')
 
+        elif "guia anterior" in comando:
+             with teclado.pressed(Key.ctrl, Key.shift):
+                  teclado.press('tab')
+                  teclado.release('tab')
+
+        elif "proxima guia" in comando:
+             with teclado.pressed(Key.ctrl):
+                  teclado.press('n')
+                  teclado.release('n')
+
+
         #comando gerais do computador:    
         elif "abrir terminal" in comando or "abrir comandos" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
