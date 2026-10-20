@@ -91,11 +91,36 @@ def executar_comando(comando):
                   teclado.press('tab')
                   teclado.release('tab')
 
-        elif "proxima guia" in comando:
+        elif "nova janela" in comando:
              with teclado.pressed(Key.ctrl):
                   teclado.press('n')
                   teclado.release('n')
 
+        elif "nova janela" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "abrir histórico" in comando:
+             with teclado.pressed(Key.ctrl):
+                teclado.press('h')
+                teclado.release('h')
+
+        elif "abrir download" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('j')
+                teclado.release('j')
+
+        
+        elif "adcionar oas favoritos" in comando:
+                with teclado.pressed(Key.ctrl):
+                    teclado.press('d')
+                    teclado.release('d')
+
+        elif "adcionar oas favoritos" in comando:
+                with teclado.pressed(Key.ctrl, ):
+                    teclado.press('d')
+                    teclado.release('d')
 
         #comando gerais do computador:    
         elif "abrir terminal" in comando or "abrir comandos" in comando:
