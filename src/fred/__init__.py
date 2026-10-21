@@ -46,20 +46,24 @@ def executar_comando(comando):
         return
 
 
-    # 🔄 ALTERNÂNCIA DE IDIOMA POR VOZ
+    # ALTERNÂNCIA DE IDIOMA POR VOZ ---------------------------------------------------------------------------------
 
-    if "mudar para espanhol" in comando or "cambiar a español" in comando:
+    if "mudar para espanhol" in comando or "cambiar a español" in comando or "switch to spanish" in comando:
         idioma_atual = 'es-ES'
-        print("🇨🇱🇪🇸 Idioma alterado para ESPANHOL.")
+        print("Idioma alterado para ESPANHOL.")
         return
 
-    elif "mudar para português" in comando or "cambiar a portugués" in comando:
+    elif "mudar para português" in comando or "cambiar a portugués" in comando or "switch to portuguese" in comando:
         idioma_atual = 'pt-BR'
-        print("🇧🇷🇵🇹 Idioma alterado para PORTUGUÊS.")
+        print("Idioma alterado para PORTUGUÊS.")
         return
 
+    elif "mudar para inglês" in comando or "cambiar a inglés" in comando or "switch to english" in comando:
+            idioma_atual = 'en-US'
+            print("Idioma alterado para INGLÊS.")
+            return
 
-    # 🇧🇷 COMANDOS EM PORTUGUÊS
+    # COMANDOS EM PORTUGUÊS-----------------------------------------------------------------------------------------
 
     if idioma_atual == 'pt-BR':
         #comandos do google:
@@ -134,7 +138,8 @@ def executar_comando(comando):
             teclado.press('f12')
             teclado.release('f12')
         
-        #comando gerais do computador:    
+        #comando gerais do computador: 
+        #Linux   
         elif "abrir terminal" in comando or "abrir comandos" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press('t')
@@ -153,7 +158,20 @@ def executar_comando(comando):
         elif "renomear arquivo" or "renomear pasta" in comando:
             teclado.press(Key.f2)
             teclado.release(Key.f2)
-                
+
+        # Windows
+        elif "mostrar área de trabalho" or "ocultar área de trabalho" in comando:
+             with teclado.pressed(Key.win):
+                  teclado.press('d')
+                  teclado.release('d')
+
+        elif "abrir explorador de arquivos" in comando:
+             with teclado.pressed(Key.win):
+                  teclado.press('e')
+                  teclado.release('e')
+
+
+        #Abos sistemas operacionais 
         elif "escrever" in comando:
             # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
             texto_para_digitar = comando.replace("escrever", "").strip()
@@ -227,7 +245,7 @@ def executar_comando(comando):
             print("👋 Encerrando...")
             sys.exit()
 
-    # 🇪🇸 COMANDOS EM ESPANHOL
+    # COMANDOS EM ESPANHOL ----------------------------------------------------------------------------
   
     elif idioma_atual == 'es-ES':
         
@@ -301,9 +319,11 @@ def executar_comando(comando):
             print("👋 Saliendo...")
             sys.exit()
 
+# COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
+
 
 def main() -> None:
-    print("=== ASSISTENTE DE ACESSIBILIDADE BILÍNGUE (LINUX) ===")
+    print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE (LINUX) ===")
     while True:
         comando_voz = ouvir_microfone()
         executar_comando(comando_voz)
