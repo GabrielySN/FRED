@@ -117,10 +117,22 @@ def executar_comando(comando):
                     teclado.press('d')
                     teclado.release('d')
 
-        elif "adcionar oas favoritos" in comando:
-                with teclado.pressed(Key.ctrl, ):
-                    teclado.press('d')
-                    teclado.release('d')
+        elif "abrir gerenciador de favoritos" in comando:
+                with teclado.pressed(Key.ctrl,Key.shift):
+                    teclado.press('o')
+                    teclado.release('o')
+
+        elif "pesquisar uma palavra" in comando:
+                with teclado.pressed(Key.ctrl):
+                    teclado.press('f')
+                    teclado.release('f')
+
+        elif "abrir gerenciador de favoritos" in comando:
+                with teclado.pressed(Key.ctrl,Key.shift):
+                    teclado.press('j')
+                    teclado.release('j')
+                or teclado.press('f12')
+                    teclado.release('f12')
 
         #comando gerais do computador:    
         elif "abrir terminal" in comando or "abrir comandos" in comando:
