@@ -113,37 +113,46 @@ def executar_comando(comando):
 
         
         elif "adcionar oas favoritos" in comando:
-                with teclado.pressed(Key.ctrl):
-                    teclado.press('d')
-                    teclado.release('d')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('d')
+                teclado.release('d')
 
         elif "abrir gerenciador de favoritos" in comando:
-                with teclado.pressed(Key.ctrl,Key.shift):
-                    teclado.press('o')
-                    teclado.release('o')
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('o')
+                teclado.release('o')
 
         elif "pesquisar uma palavra" in comando:
-                with teclado.pressed(Key.ctrl):
-                    teclado.press('f')
-                    teclado.release('f')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('f')
+                teclado.release('f')
 
         elif "abrir ferramentas de desenvolvedor" in comando:
-                with teclado.pressed(Key.ctrl,Key.shift):
-                    teclado.press('j')
-                    teclado.release('j')
-                or teclado.press('f12')
-                    teclado.release('f12')
-
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('j')
+                teclado.release('j')
+            teclado.press('f12')
+            teclado.release('f12')
+        
         #comando gerais do computador:    
         elif "abrir terminal" in comando or "abrir comandos" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press('t')
                 teclado.release('t')
-                
+
+        elif "ativar tela cheia" or "desativar tela cheia"  in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press(Key.f11)
+                teclado.release(Key.f11)
+        
         elif "fechar janela" in comando or "fechar programa" in comando:
             with teclado.pressed(Key.alt):
                 teclado.press(Key.f4)
                 teclado.release(Key.f4)
+
+        elif "renomear arquivo" or "renomear pasta" in comando:
+            teclado.press(Key.f2)
+            teclado.release(Key.f2)
                 
         elif "escrever" in comando:
             # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
