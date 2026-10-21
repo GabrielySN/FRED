@@ -127,7 +127,7 @@ def executar_comando(comando):
                     teclado.press('f')
                     teclado.release('f')
 
-        elif "abrir gerenciador de favoritos" in comando:
+        elif "abrir ferramentas de desenvolvedor" in comando:
                 with teclado.pressed(Key.ctrl,Key.shift):
                     teclado.press('j')
                     teclado.release('j')
