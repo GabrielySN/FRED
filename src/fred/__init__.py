@@ -337,12 +337,12 @@ def executar_comando(comando):
 
         elif "borrar todo" in comando:
                             
-                        with teclado.pressed(Key.ctrl):
-                            teclado.press('a')
-                            teclado.release('a')
-                        time.sleep(0.1)  
-                        teclado.press(Key.backspace)
-                        teclado.release(Key.backspace)
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+            time.sleep(0.1)  
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
 
         elif "borrar" in comando:
                     teclado.press(Key.backspace)
