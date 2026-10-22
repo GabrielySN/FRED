@@ -100,7 +100,7 @@ def executar_comando(comando):
                   teclado.press('n')
                   teclado.release('n')
 
-        elif "nova janela" in comando:
+        elif "nova janela anônima" in comando:
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press('n')
                 teclado.release('n')
@@ -114,7 +114,6 @@ def executar_comando(comando):
             with teclado.pressed(Key.ctrl):
                 teclado.press('j')
                 teclado.release('j')
-
         
         elif "adcionar oas favoritos" in comando:
             with teclado.pressed(Key.ctrl):
@@ -137,6 +136,12 @@ def executar_comando(comando):
                 teclado.release('j')
             teclado.press('f12')
             teclado.release('f12')
+
+        elif "alterar janelas" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+                    
         
         #comando gerais do computador: 
         #Linux   
@@ -150,14 +155,33 @@ def executar_comando(comando):
                 teclado.press(Key.f11)
                 teclado.release(Key.f11)
         
-        elif "fechar janela" in comando or "fechar programa" in comando:
-            with teclado.pressed(Key.alt):
-                teclado.press(Key.f4)
-                teclado.release(Key.f4)
-
         elif "renomear arquivo" or "renomear pasta" in comando:
             teclado.press(Key.f2)
             teclado.release(Key.f2)
+
+        elif "bloquear tela" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "minimizar janela" in comando or "restaurar janela" in comando or "área de trabalho" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press('d')
+                teclado.release('d')
+
+        elif "bloquear tela" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
+
+        elif "iniciar gravação" in comando or "parar gravação" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt, Key.shift):
+                teclado.press('r')
+                teclado.release('r')
+
+        elif "tirar print" in comando:
+            teclado.press(Key.print_screen)
+            teclado.release(Key.print_screen)
 
         # Windows
         elif "mostrar área de trabalho" or "ocultar área de trabalho" in comando:
@@ -170,8 +194,27 @@ def executar_comando(comando):
                   teclado.press('e')
                   teclado.release('e')
 
+        elif "configurações w" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('i')
+                teclado.release('i')
+
+        elif "bloquear computador" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "abrir gerenciador de tarefas" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.esc)
+                teclado.release(Key.esc)
 
         #Abos sistemas operacionais 
+        elif "fechar janela" in comando or "fechar programa" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.f4)
+                teclado.release(Key.f4)
+        
         elif "escrever" in comando:
             # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
             texto_para_digitar = comando.replace("escrever", "").strip()
