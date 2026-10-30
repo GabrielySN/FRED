@@ -141,10 +141,13 @@ def executar_comando(comando):
             with teclado.pressed(Key.alt):
                 teclado.press(Key.tab)
                 teclado.release(Key.tab)
-                    
+
         
+                    
         #comando gerais do computador: 
+        
         #Linux   
+        
         elif "abrir terminal" in comando or "abrir comandos" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press('t')
@@ -179,11 +182,10 @@ def executar_comando(comando):
                 teclado.press('r')
                 teclado.release('r')
 
-        elif "tirar print" in comando:
-            teclado.press(Key.print_screen)
-            teclado.release(Key.print_screen)
+
 
         # Windows
+        
         elif "mostrar área de trabalho" or "ocultar área de trabalho" in comando:
              with teclado.pressed(Key.win):
                   teclado.press('d')
@@ -209,7 +211,16 @@ def executar_comando(comando):
                 teclado.press(Key.esc)
                 teclado.release(Key.esc)
 
-        #Abos sistemas operacionais 
+        #Abos sistemas operacionais
+        
+        elif "tirar print" in comando:
+            teclado.press(Key.print_screen)
+            teclado.release(Key.print_screen)
+
+        elif "Cria uma nova pasta" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift ):
+                teclado.press('n')
+                teclado.release('n') 
         elif "fechar janela" in comando or "fechar programa" in comando:
             with teclado.pressed(Key.alt):
                 teclado.press(Key.f4)
@@ -289,81 +300,12 @@ def executar_comando(comando):
             sys.exit()
 
     # COMANDOS EM ESPANHOL ----------------------------------------------------------------------------
-  
     elif idioma_atual == 'es-ES':
         
-        if "abrir navegador" in comando or "abrir internet" in comando:
-            os.system("xdg-open https://google.com &")
-            
-        elif "abrir terminal" in comando or "abrir comandos" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt):
-                teclado.press('t')
-                teclado.release('t')
                 
-        elif "cerrar ventana" in comando or "cerrar programa" in comando:
-            with teclado.pressed(Key.alt):
-                teclado.press(Key.f4)
-                teclado.release(Key.f4)
-                
-        elif "escribir" in comando:
-            texto_para_digitar = comando.replace("escribir", "").strip()
-            teclado.type(texto_para_digitar)
 
-        elif "copie" in comando:
-             with teclado.pressed(Key.ctrl):
-                teclado.press('c')
-                teclado.release('c')
-
-        elif "cole" in comando:
-                 with teclado.pressed(Key.ctrl):
-                    teclado.press('v')
-                    teclado.release('v')
-
-        elif "va para esquerda" in comando:
-             teclado.press(Key.left)
-             teclado.release(Key.left) 
-
-        elif "va para direita" in comando:
-                     teclado.press(Key.right)
-                     teclado.release(Key.right)
-
-        elif "va para baixo" in comando:
-                     teclado.press(Key.down)
-                     teclado.release(Key.down)
-
-        elif "va para cima" in comando:
-                     teclado.press(Key.up)
-                     teclado.release(Key.up)
-
-        elif "borrar todo" in comando:
-                            
-            with teclado.pressed(Key.ctrl):
-                teclado.press('a')
-                teclado.release('a')
-            time.sleep(0.1)  
-            teclado.press(Key.backspace)
-            teclado.release(Key.backspace)
-
-        elif "borrar" in comando:
-                    teclado.press(Key.backspace)
-                    teclado.release(Key.backspace)
-            
-        elif "subir volumen" in comando:
-            os.system("amixer set Master 10%+")
-            
-        elif "bajar volumen" in comando:
-            os.system("amixer set Master 10%-")
-            
-        elif "aceptar" in comando:
-            teclado.press(Key.enter)
-            teclado.release(Key.enter)
-
-        elif "cerrar asistente" in comando or "apagar" in comando:
-            print("👋 Saliendo...")
-            sys.exit()
-
-# COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
-
+    # COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
+    elif idioma_atual == 'en-US':
 
 def main() -> None:
     print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE (LINUX) ===")
