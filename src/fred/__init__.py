@@ -3,6 +3,7 @@ from pynput.keyboard import Key, Controller as KeyboardController
 import os
 import sys
 import time
+import webbrowser
 
 # Inicializa o emulador de teclado
 teclado = KeyboardController()
@@ -142,6 +143,21 @@ def executar_comando(comando):
                 teclado.press(Key.tab)
                 teclado.release(Key.tab)
 
+        elif "abrir gmail" in comando or "abrir email" in comando:
+            webbrowser.open("https://mail.google.com/")
+
+        elif "abrir classroom" in comando or "abrir sala de aula" in comando:
+            webbrowser.open("https://classroom.google.com/")
+
+        elif "abrir youtube" in comando:
+            webbrowser.open("https://www.youtube.com/")
+
+        elif "abrir gmail" in comando or "abrir email" in comando:
+            webbrowser.open("https://mail.google.com/")
+
+        elif "abrir gmail" in comando or "abrir email" in comando:
+            webbrowser.open("https://mail.google.com/")
+
         
                     
         #comando gerais do computador: 
@@ -210,6 +226,8 @@ def executar_comando(comando):
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press(Key.esc)
                 teclado.release(Key.esc)
+
+        
 
         #Abos sistemas operacionais
         
