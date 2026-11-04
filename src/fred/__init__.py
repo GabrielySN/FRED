@@ -153,12 +153,31 @@ def executar_comando(comando):
             webbrowser.open("https://www.youtube.com/")
 
         elif "abrir gmail" in comando or "abrir email" in comando:
-            webbrowser.open("https://mail.google.com/")
+            webbrowser.open("https://pt.khanacademy.org?/")
+
+        elif "abrir redação" in comando:
+            webbrowser.open("https://redacao.pr.gov.br")
 
         elif "abrir gmail" in comando or "abrir email" in comando:
-            webbrowser.open("https://mail.google.com/")
+            webbrowser.open("https://aluno.escoladigital.pr.gov.br/")
 
-        
+        elif "abrir alura" in comando:
+            webbrowser.open("https://cursos.alura.com.br/")
+
+        elif "abrir matific" in comando:
+            webbrowser.open("https://www.matific.com/")
+
+        elif "abrir leia paraná" in comando:
+            webbrowser.open("https://leiaparana.odilo.us/")
+
+        elif "abrir inglês" in comando or "abrir inglês paraná" in comando:
+            webbrowser.open("https://pt.englishcentral.com/")
+
+        elif "abrir enem paraná" in comando or "abrir enem" in comando:
+            webbrowser.open("https://enempr.com.br/")
+
+        elif "abrir quizzis" in comando:
+            webbrowser.open("https://wayground.com/")
                     
         #comando gerais do computador: 
         
