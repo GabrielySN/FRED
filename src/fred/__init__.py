@@ -178,6 +178,11 @@ def executar_comando(comando):
 
         elif "abrir quizzis" in comando:
             webbrowser.open("https://wayground.com/")
+
+        elif "lipar navegação" in comando or "limpar cache" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
                     
         #comando gerais do computador: 
         
@@ -188,14 +193,19 @@ def executar_comando(comando):
                 teclado.press('t')
                 teclado.release('t')
 
-        elif "ativar tela cheia" or "desativar tela cheia"  in comando:
+        elif "ativar tela cheia" in comando or "desativar tela cheia"  in comando:
             with teclado.pressed(Key.ctrl):
                 teclado.press(Key.f11)
                 teclado.release(Key.f11)
         
-        elif "renomear arquivo" or "renomear pasta" in comando:
+        elif "renomear arquivo" in comando or "renomear pasta" in comando:
             teclado.press(Key.f2)
             teclado.release(Key.f2)
+
+        elif "atualizar pagina" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)
+        
 
         elif "bloquear tela" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
@@ -207,7 +217,7 @@ def executar_comando(comando):
                 teclado.press('d')
                 teclado.release('d')
 
-        elif "bloquear tela" in comando:
+        elif "opção de encerramento" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
@@ -221,7 +231,7 @@ def executar_comando(comando):
 
         # Windows
         
-        elif "mostrar área de trabalho" or "ocultar área de trabalho" in comando:
+        elif "mostrar área de trabalho" in comando or "ocultar área de trabalho" in comando:
              with teclado.pressed(Key.win):
                   teclado.press('d')
                   teclado.release('d')
@@ -331,6 +341,12 @@ def executar_comando(comando):
         elif "confirmar" in comando:
             teclado.press(Key.enter)
             teclado.release(Key.enter)
+
+        elif "abrir vs code" in comando:
+            os.system("code")
+
+        elif "abrir vs code" in comando:
+            os.system("open -a Calculator")
 
         elif "encerrar programa" in comando or "desligar" in comando:
             print("👋 Encerrando...")
