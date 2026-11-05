@@ -12,11 +12,15 @@ teclado = KeyboardController()
 idioma_atual = 'pt-BR' 
 
 def ouvir_microfone():
-    global idioma_atual 
+    global idioma_atual
     reconhecedor = sr.Recognizer()
     
     # Parâmetros de acessibilidade: ajusta os tempos para pessoas que falam mais pausadamente
     reconhecedor.dynamic_energy_threshold = True
+    # Padrão é 0.8. Com 2.0, você pode pausar por até 2 segundos entre as palavras.
+    reconhecedor.pause_threshold = 2.0
+    # Tempo de silêncio tolerado antes da fala começar
+    reconhecedor.non_speaking_duration = 1.0
     
     with sr.Microphone() as source:
         reconhecedor.adjust_for_ambient_noise(source, duration=1)
@@ -24,7 +28,7 @@ def ouvir_microfone():
         
         try:
             # Captura o áudio com margem de tempo confortável
-            audio = reconhecedor.listen(source, timeout=6, phrase_time_limit=8)
+            audio = reconhecedor.listen(source, timeout=6)
             print("🤖 Processando voz...")
             
             # Reconhece no idioma que está ativo no momento
