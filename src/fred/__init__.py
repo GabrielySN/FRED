@@ -345,7 +345,7 @@ def executar_comando(comando):
         elif "abrir vs code" in comando:
             os.system("code")
 
-        elif "abrir vs code" in comando:
+        elif "abrir calculadora" in comando:
             os.system("open -a Calculator")
 
         elif "encerrar programa" in comando or "desligar" in comando:
