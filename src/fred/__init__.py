@@ -86,22 +86,22 @@ def executar_comando(comando):
                   teclado.press('t')
                   teclado.release('t')
 
-        elif "proxima guia" in comando:
+        elif "próxima guia" in comando:
              with teclado.pressed(Key.ctrl):
-                  teclado.press('tab')
-                  teclado.release('tab')
+                  teclado.press(Key.tab)
+                  teclado.release(Key.tab)
 
         elif "guia anterior" in comando:
              with teclado.pressed(Key.ctrl, Key.shift):
-                  teclado.press('tab')
-                  teclado.release('tab')
+                  teclado.press(Key.tab)
+                  teclado.release(Key.tab)
 
         elif "nova janela" in comando:
              with teclado.pressed(Key.ctrl):
                   teclado.press('n')
                   teclado.release('n')
 
-        elif "nova janela anônima" in comando:
+        elif "janela anônima" in comando:
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press('n')
                 teclado.release('n')
@@ -116,37 +116,36 @@ def executar_comando(comando):
                 teclado.press('j')
                 teclado.release('j')
         
-        elif "adcionar oas favoritos" in comando:
+        elif "adicionar aos favoritos" in comando:
             with teclado.pressed(Key.ctrl):
                 teclado.press('d')
                 teclado.release('d')
 
-        elif "abrir gerenciador de favoritos" in comando:
+        elif "gerenciador de favoritos" in comando:
             with teclado.pressed(Key.ctrl,Key.shift):
                 teclado.press('o')
                 teclado.release('o')
 
-        elif "pesquisar uma palavra" in comando:
+        elif "pesquisar palavra" in comando:
             with teclado.pressed(Key.ctrl):
                 teclado.press('f')
                 teclado.release('f')
 
-        elif "abrir ferramentas de desenvolvedor" in comando:
+        elif "abrir ferramenta desenvolvedor" in comando:
             with teclado.pressed(Key.ctrl,Key.shift):
                 teclado.press('j')
                 teclado.release('j')
             teclado.press('f12')
             teclado.release('f12')
 
-        elif "alterar janelas" in comando:
-            with teclado.pressed(Key.alt):
-                teclado.press(Key.tab)
-                teclado.release(Key.tab)
+        elif "sair" in comando:
+            teclado.press(Key.esc)
+            teclado.release(Key.esc)
 
         elif "abrir gmail" in comando or "abrir email" in comando:
             webbrowser.open("https://mail.google.com/")
 
-        elif "abrir classroom" in comando or "abrir sala de aula" in comando:
+        elif "abrir sala" in comando or "abrir sala de aula" in comando:
             webbrowser.open("https://classroom.google.com/")
 
         elif "abrir youtube" in comando:
@@ -157,9 +156,6 @@ def executar_comando(comando):
 
         elif "abrir redação" in comando:
             webbrowser.open("https://redacao.pr.gov.br")
-
-        elif "abrir gmail" in comando or "abrir email" in comando:
-            webbrowser.open("https://aluno.escoladigital.pr.gov.br/")
 
         elif "abrir alura" in comando:
             webbrowser.open("https://cursos.alura.com.br/")
@@ -176,7 +172,7 @@ def executar_comando(comando):
         elif "abrir enem paraná" in comando or "abrir enem" in comando:
             webbrowser.open("https://enempr.com.br/")
 
-        elif "abrir quizzis" in comando:
+        elif "abrir quizes" in comando:
             webbrowser.open("https://wayground.com/")
 
         elif "lipar navegação" in comando or "limpar cache" in comando:
@@ -193,16 +189,15 @@ def executar_comando(comando):
                 teclado.press('t')
                 teclado.release('t')
 
-        elif "ativar tela cheia" in comando or "desativar tela cheia"  in comando:
-            with teclado.pressed(Key.ctrl):
-                teclado.press(Key.f11)
-                teclado.release(Key.f11)
+        elif "tela cheia" in comando or "desativar tela cheia"  in comando:
+            teclado.press(Key.f11)
+            teclado.release(Key.f11)
         
         elif "renomear arquivo" in comando or "renomear pasta" in comando:
             teclado.press(Key.f2)
             teclado.release(Key.f2)
 
-        elif "atualizar pagina" in comando:
+        elif "atualizar página" in comando:
             teclado.press(Key.f5)
             teclado.release(Key.f5)
         
@@ -260,11 +255,16 @@ def executar_comando(comando):
 
         #Abos sistemas operacionais
         
+        elif "alterar janela" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+        
         elif "tirar print" in comando:
             teclado.press(Key.print_screen)
             teclado.release(Key.print_screen)
 
-        elif "Cria uma nova pasta" in comando:
+        elif "cria uma nova pasta" in comando:
             with teclado.pressed(Key.ctrl, Key.shift ):
                 teclado.press('n')
                 teclado.release('n') 
@@ -288,19 +288,19 @@ def executar_comando(comando):
                 teclado.press('v')
                 teclado.release('v')
         
-        elif "va para esquerda" in comando:
+        elif "vá para esquerda" in comando:
             teclado.press(Key.left)
             teclado.release(Key.left) 
         
-        elif "va para direita" in comando:
+        elif "vá para direita" in comando:
             teclado.press(Key.right)
             teclado.release(Key.right)
         
-        elif "va para baixo" in comando:
+        elif "vá para baixo" in comando:
             teclado.press(Key.down)
             teclado.release(Key.down)
         
-        elif "va para cima" in comando:
+        elif "vá para cima" in comando:
                 teclado.press(Key.up)
                 teclado.release(Key.up)
 
@@ -353,12 +353,12 @@ def executar_comando(comando):
             sys.exit()
 
     # COMANDOS EM ESPANHOL ----------------------------------------------------------------------------
-    elif idioma_atual == 'es-ES':
+    #elif idioma_atual == 'es-ES':
         
                 
 
     # COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
-    elif idioma_atual == 'en-US':
+    #elif idioma_atual == 'en-US':
 
 def main() -> None:
     print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE (LINUX) ===")
