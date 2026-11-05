@@ -12,7 +12,7 @@ teclado = KeyboardController()
 idioma_atual = 'pt-BR' 
 
 def ouvir_microfone():
-    global idioma_atual
+    global idioma_atual 
     reconhecedor = sr.Recognizer()
     
     # Parâmetros de acessibilidade: ajusta os tempos para pessoas que falam mais pausadamente
