@@ -4,6 +4,7 @@ import os
 import sys
 import time
 import webbrowser
+import subprocess
 
 # Inicializa o emulador de teclado
 teclado = KeyboardController()
@@ -17,8 +18,8 @@ def ouvir_microfone():
     
     # Parâmetros de acessibilidade: ajusta os tempos para pessoas que falam mais pausadamente
     reconhecedor.dynamic_energy_threshold = True
-    # Padrão é 0.8. Com 2.0, você pode pausar por até 2 segundos entre as palavras.
-    reconhecedor.pause_threshold = 2.0
+    # Padrão é 0.8. Com 2.0, você pode pausar por até 1 segundos entre as palavras.
+    reconhecedor.pause_threshold = 1.0
     # Tempo de silêncio tolerado antes da fala começar
     reconhecedor.non_speaking_duration = 1.0
     
@@ -179,6 +180,9 @@ def executar_comando(comando):
         elif "abrir quizes" in comando:
             webbrowser.open("https://wayground.com/")
 
+        elif "abrir documento" in comando:
+            webbrowser.open("https://docs.google.com/")
+
         elif "lipar navegação" in comando or "limpar cache" in comando:
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press(Key.delete)
@@ -189,7 +193,7 @@ def executar_comando(comando):
         #Linux   
         
         elif "abrir terminal" in comando or "abrir comandos" in comando:
-            os.system("terminal")
+            subprocess.Popen(["gnome-terminal"])
 
         elif "tela cheia" in comando or "desativar tela cheia"  in comando:
             teclado.press(Key.f11)
