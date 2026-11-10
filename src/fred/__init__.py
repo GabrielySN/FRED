@@ -213,20 +213,10 @@ def executar_comando(comando):
                 teclado.press('l')
                 teclado.release('l')
 
-        elif "minimizar janela" in comando or "restaurar janela" in comando or "área de trabalho" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt):
-                teclado.press('d')
-                teclado.release('d')
-
         elif "opção de encerramento" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
-
-        elif "iniciar gravação" in comando or "parar gravação" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt, Key.shift):
-                teclado.press('r')
-                teclado.release('r')
 
 
 
@@ -270,10 +260,11 @@ def executar_comando(comando):
             teclado.press(Key.print_screen)
             teclado.release(Key.print_screen)
 
-        elif "cria uma nova pasta" in comando:
+        elif "criar nova pasta" in comando:
             with teclado.pressed(Key.ctrl, Key.shift ):
                 teclado.press('n')
-                teclado.release('n') 
+                teclado.release('n')
+
         elif "fechar janela" in comando or "fechar programa" in comando:
             with teclado.pressed(Key.alt):
                 teclado.press(Key.f4)
@@ -352,7 +343,7 @@ def executar_comando(comando):
             os.system("code")
              
         elif "abrir calculadora" in comando:
-            os.system("open -a Calculator")
+            os.system("gnome-calculator &")
 
         elif "encerrar programa" in comando or "desligar" in comando:
             print("👋 Encerrando...")
