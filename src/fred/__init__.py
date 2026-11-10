@@ -77,34 +77,34 @@ def executar_comando(comando):
             os.system("xdg-open https://google.com &")
 
         elif "nova aba" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('t')
-                  teclado.release('t')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('t')
+                teclado.release('t')
 
         elif "fechar aba" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('w')
-                  teclado.release('w')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('w')
+                teclado.release('w')
 
         elif "reabrir aba" in comando:
-             with teclado.pressed(Key.ctrl, Key.shift):
-                  teclado.press('t')
-                  teclado.release('t')
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('t')
+                teclado.release('t')
 
         elif "próxima guia" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press(Key.tab)
-                  teclado.release(Key.tab)
+            with teclado.pressed(Key.ctrl):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
 
         elif "guia anterior" in comando:
-             with teclado.pressed(Key.ctrl, Key.shift):
-                  teclado.press(Key.tab)
-                  teclado.release(Key.tab)
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
 
         elif "nova janela" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('n')
-                  teclado.release('n')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('n')
+                teclado.release('n')
 
         elif "janela anônima" in comando:
             with teclado.pressed(Key.ctrl, Key.shift):
@@ -112,7 +112,7 @@ def executar_comando(comando):
                 teclado.release('n')
 
         elif "abrir histórico" in comando:
-             with teclado.pressed(Key.ctrl):
+            with teclado.pressed(Key.ctrl):
                 teclado.press('h')
                 teclado.release('h')
 
@@ -156,7 +156,7 @@ def executar_comando(comando):
         elif "abrir youtube" in comando:
             webbrowser.open("https://www.youtube.com/")
 
-        elif "abrir gmail" in comando or "abrir email" in comando:
+        elif "abrir khan academy" in comando or "abrir khan" in comando:
             webbrowser.open("https://pt.khanacademy.org?/")
 
         elif "abrir redação" in comando:
@@ -223,14 +223,14 @@ def executar_comando(comando):
         # Windows
         
         elif "mostrar área de trabalho" in comando or "ocultar área de trabalho" in comando:
-             with teclado.pressed(Key.win):
-                  teclado.press('d')
-                  teclado.release('d')
+            with teclado.pressed(Key.win):
+                teclado.press('d')
+                teclado.release('d')
 
         elif "abrir explorador de arquivos" in comando:
-             with teclado.pressed(Key.win):
-                  teclado.press('e')
-                  teclado.release('e')
+            with teclado.pressed(Key.win):
+                teclado.press('e')
+                teclado.release('e')
 
         elif "configurações w" in comando:
             with teclado.pressed(Key.win):
@@ -298,8 +298,8 @@ def executar_comando(comando):
             teclado.release(Key.down)
         
         elif "vá para cima" in comando:
-                teclado.press(Key.up)
-                teclado.release(Key.up)
+            teclado.press(Key.up)
+            teclado.release(Key.up)
 
         elif "apagar tudo" in comando:
                     
@@ -315,19 +315,19 @@ def executar_comando(comando):
             teclado.release(Key.backspace)
 
         elif "desfazer" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('z')
-                  teclado.release('z')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('z')
+                teclado.release('z')
 
         elif "refazer" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('y')
-                  teclado.release('y')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('y')
+                teclado.release('y')
 
         elif "selecionar tudo" in comando:
-             with teclado.pressed(Key.ctrl):
-                  teclado.press('a')
-                  teclado.release('a')
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
     
         elif "aumentar volume" in comando:
             os.system("amixer set Master 10%+")
@@ -350,12 +350,564 @@ def executar_comando(comando):
             sys.exit()
 
     # COMANDOS EM ESPANHOL ----------------------------------------------------------------------------
-    #elif idioma_atual == 'es-ES':
+    elif idioma_atual == 'es-ES':
+        #comandos do google:
+        if "abrir navegador" in comando or "abrir google" in comando:
+            os.system("xdg-open https://google.com &")
+
+        elif "nueva pestaña" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('t')
+                teclado.release('t')
+
+        elif "cerrar pestaña" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('w')
+                teclado.release('w')
+
+        elif "reabrir pestaña" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('t')
+                teclado.release('t')
+
+        elif "próxima guía" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+
+        elif "guía anterior" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+
+        elif "nueva ventana" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "ventana anónima" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "abrir historial" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('h')
+                teclado.release('h')
+
+        elif "abrir descarga" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('j')
+                teclado.release('j')
         
+        elif "añadir a favoritos" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('d')
+                teclado.release('d')
+
+        elif "gestor de  favoritos" in comando:
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('o')
+                teclado.release('o')
+
+        elif "buscar palabra" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('f')
+                teclado.release('f')
+
+        elif "abrir herramientas de desarrollador" in comando:
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('j')
+                teclado.release('j')
+            teclado.press('f12')
+            teclado.release('f12')
+
+        elif "salir" in comando:
+            teclado.press(Key.esc)
+            teclado.release(Key.esc)
+
+        elif "abrir gmail" in comando or "abrir correo electrónico" in comando:
+            webbrowser.open("https://mail.google.com/")
+
+        elif "abrir habitación" in comando:
+            webbrowser.open("https://classroom.google.com/")
+
+        elif "abrir youtube" in comando:
+            webbrowser.open("https://www.youtube.com/")
+
+        elif "abrir khan academy" in comando or "abrir khan" in comando:
+            webbrowser.open("https://pt.khanacademy.org?/")
+
+        elif "abrir redacción" in comando:
+            webbrowser.open("https://redacao.pr.gov.br")
+
+        elif "abrir alura" in comando:
+            webbrowser.open("https://cursos.alura.com.br/")
+
+        elif "abrir matific" in comando:
+            webbrowser.open("https://www.matific.com/")
+
+        elif "abrir leia paraná" in comando:
+            webbrowser.open("https://leiaparana.odilo.us/")
+
+        elif "abrir inglés" in comando or "abrir inglés paraná" in comando:
+            webbrowser.open("https://pt.englishcentral.com/")
+
+        elif "abrir enem paraná" in comando or "abrir enem" in comando:
+            webbrowser.open("https://enempr.com.br/")
+
+        elif "abrir quizes" in comando:
+            webbrowser.open("https://wayground.com/")
+
+        elif "abrir documento" in comando:
+            webbrowser.open("https://docs.google.com/")
+
+        elif "limpiar navegación" in comando or "limpiar caché" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
+                    
+        #comando gerais do computador: 
+        
+        #Linux   
+        
+        elif "abrir terminal" in comando or "abrir comandos" in comando:
+            subprocess.Popen(["gnome-terminal"])
+
+        elif "pantalla completa" in comando or "desactivar pantalla completa"  in comando:
+            teclado.press(Key.f11)
+            teclado.release(Key.f11)
+        
+        elif "renombrar archivo" in comando or "renombrar carpeta" in comando:
+            teclado.press(Key.f2)
+            teclado.release(Key.f2)
+
+        elif "actualizar página" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)
+        
+
+        elif "bloquear pantalla" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "opción de cierre" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
+
+
+
+        # Windows
+        
+        elif "mostrar escritorio" in comando or "ocultar el escritorio" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('d')
+                teclado.release('d')
+
+        elif "abrir el explorador de archivos" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('e')
+                teclado.release('e')
+
+        elif "configuraciones w" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('i')
+                teclado.release('i')
+
+        elif "bloquear computador" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "abrir el administrador de tareas" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.esc)
+                teclado.release(Key.esc)
+
+        
+
+        #Abos sistemas operacionais
+        
+        elif "modificar ventana" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+        
+        elif "tomar una captura de pantalla" in comando:
+            teclado.press(Key.print_screen)
+            teclado.release(Key.print_screen)
+
+        elif "crear nueva carpeta" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift ):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "cerrar ventana" in comando or "cerrar programa" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.f4)
+                teclado.release(Key.f4)
+        
+        elif "escribir" in comando:
+            # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
+            texto_para_digitar = comando.replace("escrever", "").strip()
+            teclado.type(texto_para_digitar)
+
+        elif "copiar" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('c')
+                teclado.release('c')
+        
+        elif "pegar" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('v')
+                teclado.release('v')
+        
+        elif "ve a la izquierda" in comando:
+            teclado.press(Key.left)
+            teclado.release(Key.left) 
+        
+        elif "ve a la derecha" in comando:
+            teclado.press(Key.right)
+            teclado.release(Key.right)
+        
+        elif "ve hacia abajo" in comando:
+            teclado.press(Key.down)
+            teclado.release(Key.down)
+        
+        elif "ve hacia arriba" in comando:
+            teclado.press(Key.up)
+            teclado.release(Key.up)
+
+        elif "borrar todo" in comando:
+                    
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+            time.sleep(0.1)  
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
+                    
+        elif "borrar" in comando:
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
+
+        elif "deshacer" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('z')
+                teclado.release('z')
+
+        elif "rehacer" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('y')
+                teclado.release('y')
+
+        elif "seleccionar todo" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+    
+        elif "aumentar el volumen" in comando:
+            os.system("amixer set Master 10%+")
+            
+        elif "disminuir el volumen" in comando:
+            os.system("amixer set Master 10%-")
+            
+        elif "confirmar" in comando:
+            teclado.press(Key.enter)
+            teclado.release(Key.enter)
+
+        elif "abrir vs code" in comando:
+            os.system("code")
+                
+        elif "abrir calculadora" in comando:
+            os.system("gnome-calculator &")
+
+        elif "cerrar programa" in comando or "apagar" in comando:
+            print("👋 Encerrando...")
+            sys.exit()
                 
 
     # COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
-    #elif idioma_atual == 'en-US':
+    elif idioma_atual == 'en-US':
+
+        #comandos do google:
+        if "abrir navegador" in comando or "abrir google" in comando:
+            os.system("xdg-open https://google.com &")
+
+        elif "nova aba" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('t')
+                teclado.release('t')
+
+        elif "fechar aba" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('w')
+                teclado.release('w')
+
+        elif "reabrir aba" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('t')
+                teclado.release('t')
+
+        elif "próxima guia" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+
+        elif "guia anterior" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+
+        elif "nova janela" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "janela anônima" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "abrir histórico" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('h')
+                teclado.release('h')
+
+        elif "abrir download" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('j')
+                teclado.release('j')
+        
+        elif "adicionar aos favoritos" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('d')
+                teclado.release('d')
+
+        elif "gerenciador de favoritos" in comando:
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('o')
+                teclado.release('o')
+
+        elif "pesquisar palavra" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('f')
+                teclado.release('f')
+
+        elif "abrir ferramenta desenvolvedor" in comando:
+            with teclado.pressed(Key.ctrl,Key.shift):
+                teclado.press('j')
+                teclado.release('j')
+            teclado.press('f12')
+            teclado.release('f12')
+
+        elif "sair" in comando:
+            teclado.press(Key.esc)
+            teclado.release(Key.esc)
+
+        elif "abrir gmail" in comando or "abrir email" in comando:
+            webbrowser.open("https://mail.google.com/")
+
+        elif "abrir sala" in comando or "abrir sala de aula" in comando:
+            webbrowser.open("https://classroom.google.com/")
+
+        elif "abrir youtube" in comando:
+            webbrowser.open("https://www.youtube.com/")
+
+        elif "abrir khan academy" in comando or "abrir khan" in comando:
+            webbrowser.open("https://pt.khanacademy.org?/")
+
+        elif "abrir redação" in comando:
+            webbrowser.open("https://redacao.pr.gov.br")
+
+        elif "abrir alura" in comando:
+            webbrowser.open("https://cursos.alura.com.br/")
+
+        elif "abrir matific" in comando:
+            webbrowser.open("https://www.matific.com/")
+
+        elif "abrir leia paraná" in comando:
+            webbrowser.open("https://leiaparana.odilo.us/")
+
+        elif "abrir inglês" in comando or "abrir inglês paraná" in comando:
+            webbrowser.open("https://pt.englishcentral.com/")
+
+        elif "abrir enem paraná" in comando or "abrir enem" in comando:
+            webbrowser.open("https://enempr.com.br/")
+
+        elif "abrir quizes" in comando:
+            webbrowser.open("https://wayground.com/")
+
+        elif "abrir documento" in comando:
+            webbrowser.open("https://docs.google.com/")
+
+        elif "lipar navegação" in comando or "limpar cache" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
+                    
+        #comando gerais do computador: 
+        
+        #Linux   
+        
+        elif "abrir terminal" in comando or "abrir comandos" in comando:
+            subprocess.Popen(["gnome-terminal"])
+
+        elif "tela cheia" in comando or "desativar tela cheia"  in comando:
+            teclado.press(Key.f11)
+            teclado.release(Key.f11)
+        
+        elif "renomear arquivo" in comando or "renomear pasta" in comando:
+            teclado.press(Key.f2)
+            teclado.release(Key.f2)
+
+        elif "atualizar página" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)
+        
+
+        elif "bloquear tela" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "opção de encerramento" in comando:
+            with teclado.pressed(Key.ctrl, Key.alt):
+                teclado.press(Key.delete)
+                teclado.release(Key.delete)
+
+
+
+        # Windows
+        
+        elif "mostrar área de trabalho" in comando or "ocultar área de trabalho" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('d')
+                teclado.release('d')
+
+        elif "abrir explorador de arquivos" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('e')
+                teclado.release('e')
+
+        elif "configurações w" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('i')
+                teclado.release('i')
+
+        elif "bloquear computador" in comando:
+            with teclado.pressed(Key.win):
+                teclado.press('l')
+                teclado.release('l')
+
+        elif "abrir gerenciador de tarefas" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift):
+                teclado.press(Key.esc)
+                teclado.release(Key.esc)
+
+        
+
+        #Abos sistemas operacionais
+        
+        elif "alterar janela" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.tab)
+                teclado.release(Key.tab)
+        
+        elif "tirar print" in comando:
+            teclado.press(Key.print_screen)
+            teclado.release(Key.print_screen)
+
+        elif "criar nova pasta" in comando:
+            with teclado.pressed(Key.ctrl, Key.shift ):
+                teclado.press('n')
+                teclado.release('n')
+
+        elif "fechar janela" in comando or "fechar programa" in comando:
+            with teclado.pressed(Key.alt):
+                teclado.press(Key.f4)
+                teclado.release(Key.f4)
+        
+        elif "escrever" in comando:
+            # Se disser "Escrever olá como vai", ele digita o que vem depois da palavra-chave
+            texto_para_digitar = comando.replace("escrever", "").strip()
+            teclado.type(texto_para_digitar)
+
+        elif "copiar" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('c')
+                teclado.release('c')
+        
+        elif "colar" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('v')
+                teclado.release('v')
+        
+        elif "vá para esquerda" in comando:
+            teclado.press(Key.left)
+            teclado.release(Key.left) 
+        
+        elif "vá para direita" in comando:
+            teclado.press(Key.right)
+            teclado.release(Key.right)
+        
+        elif "vá para baixo" in comando:
+            teclado.press(Key.down)
+            teclado.release(Key.down)
+        
+        elif "vá para cima" in comando:
+            teclado.press(Key.up)
+            teclado.release(Key.up)
+
+        elif "apagar tudo" in comando:
+                    
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+            time.sleep(0.1)  
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
+                    
+        elif "apagar" in comando:
+            teclado.press(Key.backspace)
+            teclado.release(Key.backspace)
+
+        elif "desfazer" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('z')
+                teclado.release('z')
+
+        elif "refazer" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('y')
+                teclado.release('y')
+
+        elif "selecionar tudo" in comando:
+            with teclado.pressed(Key.ctrl):
+                teclado.press('a')
+                teclado.release('a')
+    
+        elif "aumentar volume" in comando:
+            os.system("amixer set Master 10%+")
+            
+        elif "diminuir volume" in comando:
+            os.system("amixer set Master 10%-")
+            
+        elif "confirmar" in comando:
+            teclado.press(Key.enter)
+            teclado.release(Key.enter)
+
+        elif "abrir vs code" in comando:
+            os.system("code")
+                
+        elif "abrir calculadora" in comando:
+            os.system("gnome-calculator &")
+
+        elif "encerrar programa" in comando or "desligar" in comando:
+            print("👋 Encerrando...")
+            sys.exit()
 
 def main() -> None:
     print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE (LINUX) ===")
