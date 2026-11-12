@@ -212,11 +212,6 @@ def executar_comando(comando):
             teclado.release(Key.f5)
         
 
-        elif "bloquear tela" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt):
-                teclado.press('l')
-                teclado.release('l')
-
         elif "opção de encerramento" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press(Key.delete)
@@ -489,12 +484,6 @@ def executar_comando(comando):
         elif "actualizar página" in comando:
             teclado.press(Key.f5)
             teclado.release(Key.f5)
-        
-
-        elif "bloquear pantalla" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt):
-                teclado.press('l')
-                teclado.release('l')
 
         elif "opción de cierre" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
@@ -770,12 +759,6 @@ def executar_comando(comando):
         elif "refresh page" in comando:
             teclado.press(Key.f5)
             teclado.release(Key.f5)
-        
-
-        elif "lock screen" in comando:
-            with teclado.pressed(Key.ctrl, Key.alt):
-                teclado.press('l')
-                teclado.release('l')
 
         elif "termination option" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
