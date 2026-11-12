@@ -5,9 +5,13 @@ import sys
 import time
 import webbrowser
 import subprocess
+import shutil
 
 # Inicializa o emulador de teclado
 teclado = KeyboardController()
+
+terminais = ["x-terminal-emulator", "gnome-terminal", "konsole", "xfce4-terminal", "xterm"]
+terminal = next((t for t in terminais if shutil.which(t)), None)
 
 # Configuração global de idioma padrão
 idioma_atual = 'pt-BR' 
@@ -193,7 +197,7 @@ def executar_comando(comando):
         #Linux   
         
         elif "abrir terminal" in comando or "abrir comandos" in comando:
-            subprocess.Popen(["gnome-terminal"])
+            subprocess.Popen([terminal])
 
         elif "tela cheia" in comando or "desativar tela cheia"  in comando:
             teclado.press(Key.f11)
@@ -472,7 +476,7 @@ def executar_comando(comando):
         #Linux   
         
         elif "abrir terminal" in comando or "abrir comandos" in comando:
-            subprocess.Popen(["gnome-terminal"])
+            subprocess.Popen([terminal])
 
         elif "pantalla completa" in comando or "desactivar pantalla completa"  in comando:
             teclado.press(Key.f11)
@@ -753,7 +757,7 @@ def executar_comando(comando):
         #Linux   
         
         elif "open terminal" in comando or "open commands" in comando:
-            subprocess.Popen(["gnome-terminal"])
+            subprocess.Popen([terminal])
 
         elif "full screen" in comando or "disable full screen "  in comando:
             teclado.press(Key.f11)
@@ -807,7 +811,6 @@ def executar_comando(comando):
                 teclado.press(Key.esc)
                 teclado.release(Key.esc)
 
-        
 
         #Abos sistemas operacionais
         
@@ -905,7 +908,7 @@ def executar_comando(comando):
         elif "open calculator" in comando:
             os.system("gnome-calculator &")
 
-        elif "close program" in comando or "turn off" in comando:
+        elif "close" in comando or "turn off" in comando:
             print("👋 Closing...")
             sys.exit()
 
