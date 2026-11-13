@@ -196,7 +196,7 @@ def executar_comando(comando):
         
         #Linux   
         
-        elif "abrir terminal" in comando or "abrir comandos" in comando:
+        elif "abrir terminal" in comando:
             subprocess.Popen([terminal])
 
         elif "tela cheia" in comando or "desativar tela cheia"  in comando:
