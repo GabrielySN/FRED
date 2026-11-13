@@ -191,7 +191,10 @@ def executar_comando(comando):
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
-                    
+        
+        elif "atualizar página" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)            
         #comando gerais do computador: 
         
         #Linux   
@@ -205,12 +208,7 @@ def executar_comando(comando):
         
         elif "renomear arquivo" in comando or "renomear pasta" in comando:
             teclado.press(Key.f2)
-            teclado.release(Key.f2)
-
-        elif "atualizar página" in comando:
-            teclado.press(Key.f5)
-            teclado.release(Key.f5)
-        
+            teclado.release(Key.f2) 
 
         elif "opção de encerramento" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
