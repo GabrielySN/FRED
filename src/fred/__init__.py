@@ -140,7 +140,7 @@ def executar_comando(comando):
                 teclado.press('f')
                 teclado.release('f')
 
-        elif "abrir ferramenta desenvolvedor" in comando:
+        elif "abrir ferramenta de desenvolvedor" in comando:
             with teclado.pressed(Key.ctrl,Key.shift):
                 teclado.press('j')
                 teclado.release('j')
