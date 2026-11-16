@@ -76,7 +76,8 @@ def executar_comando(comando):
     # COMANDOS EM PORTUGUÊS-----------------------------------------------------------------------------------------
 
     if idioma_atual == 'pt-BR':
-        #comandos do google:
+    
+    #Comandos do google:
         if "abrir navegador" in comando or "abrir google" in comando:
             os.system("xdg-open https://google.com &")
 
@@ -194,10 +195,11 @@ def executar_comando(comando):
         
         elif "atualizar página" in comando:
             teclado.press(Key.f5)
-            teclado.release(Key.f5)            
-        #comando gerais do computador: 
+            teclado.release(Key.f5)
+
+    #Comando gerais do computador: 
         
-        #Linux   
+    #Linux   
         
         elif "abrir terminal" in comando:
             subprocess.Popen([terminal])
@@ -215,9 +217,7 @@ def executar_comando(comando):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
 
-
-
-        # Windows
+    # Windows
         
         elif "mostrar área de trabalho" in comando or "ocultar área de trabalho" in comando:
             with teclado.pressed(Key.win):
@@ -244,9 +244,7 @@ def executar_comando(comando):
                 teclado.press(Key.esc)
                 teclado.release(Key.esc)
 
-        
-
-        #Abos sistemas operacionais
+    #Abos sistemas operacionais
         
         elif "alterar janela" in comando:
             with teclado.pressed(Key.alt):
@@ -336,6 +334,10 @@ def executar_comando(comando):
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
+        elif "delete" in comando:
+            teclado.press(Key.delete)
+            teclado.release(Key.delete)
+
         elif "abrir vs code" in comando:
             os.system("code")
              
@@ -348,7 +350,8 @@ def executar_comando(comando):
 
     # COMANDOS EM ESPANHOL ----------------------------------------------------------------------------
     elif idioma_atual == 'es-ES':
-        #comandos do google:
+    
+    #Comandos do google:
         if "abrir navegador" in comando or "abrir google" in comando:
             os.system("xdg-open https://google.com &")
 
@@ -402,7 +405,7 @@ def executar_comando(comando):
                 teclado.press('d')
                 teclado.release('d')
 
-        elif "gestor de  favoritos" in comando:
+        elif "gestor de favoritos" in comando:
             with teclado.pressed(Key.ctrl,Key.shift):
                 teclado.press('o')
                 teclado.release('o')
@@ -463,12 +466,16 @@ def executar_comando(comando):
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
-                    
-        #comando gerais do computador: 
         
-        #Linux   
+        elif "actualizar página" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)           
         
-        elif "abrir terminal" in comando or "abrir comandos" in comando:
+    #Comando gerais do computador: 
+        
+    #Linux   
+        
+        elif "abrir terminal" in comando:
             subprocess.Popen([terminal])
 
         elif "pantalla completa" in comando or "desactivar pantalla completa"  in comando:
@@ -479,18 +486,12 @@ def executar_comando(comando):
             teclado.press(Key.f2)
             teclado.release(Key.f2)
 
-        elif "actualizar página" in comando:
-            teclado.press(Key.f5)
-            teclado.release(Key.f5)
-
         elif "opción de cierre" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
 
-
-
-        # Windows
+    # Windows
         
         elif "mostrar escritorio" in comando or "ocultar el escritorio" in comando:
             with teclado.pressed(Key.win):
@@ -507,7 +508,7 @@ def executar_comando(comando):
                 teclado.press('i')
                 teclado.release('i')
 
-        elif "bloquear computador" in comando:
+        elif "bloquear computadora" in comando:
             with teclado.pressed(Key.win):
                 teclado.press('l')
                 teclado.release('l')
@@ -517,9 +518,7 @@ def executar_comando(comando):
                 teclado.press(Key.esc)
                 teclado.release(Key.esc)
 
-        
-
-        #Abos sistemas operacionais
+    #Abos sistemas operacionais
         
         elif "modificar ventana" in comando:
             with teclado.pressed(Key.alt):
@@ -609,13 +608,17 @@ def executar_comando(comando):
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
+        elif "eliminar" in comando:
+            teclado.press(Key.delete)
+            teclado.release(Key.delete)
+
         elif "abrir vs code" in comando:
             os.system("code")
                 
         elif "abrir calculadora" in comando:
             os.system("gnome-calculator &")
 
-        elif "cerrar programa" in comando or "apagar" in comando:
+        elif "apagar" in comando:
             print("👋 Finalizando...")
             sys.exit()
                 
@@ -623,7 +626,7 @@ def executar_comando(comando):
     # COMANDOS EM INGLÊS--------------------------------------------------------------------------------------------------
     elif idioma_atual == 'en-US':
 
-        #comandos do google:
+    #Comandos do google:
         if "open browser" in comando or "open google" in comando:
             os.system("xdg-open https://google.com &")
 
@@ -701,7 +704,7 @@ def executar_comando(comando):
         elif "open gmail" in comando or "open email" in comando:
             webbrowser.open("https://mail.google.com/")
 
-        elif "open room" in comando or "open classroom" in comando:
+        elif "open classroom" in comando:
             webbrowser.open("https://classroom.google.com/")
 
         elif "open youtube" in comando:
@@ -722,7 +725,7 @@ def executar_comando(comando):
         elif "open leia paraná" in comando:
             webbrowser.open("https://leiaparana.odilo.us/")
 
-        elif "open english" in comando or "Open english paraná" in comando:
+        elif "open english" in comando or "open english paraná" in comando:
             webbrowser.open("https://pt.englishcentral.com/")
 
         elif "open enem paraná" in comando or "open enem" in comando:
@@ -738,12 +741,16 @@ def executar_comando(comando):
             with teclado.pressed(Key.ctrl, Key.shift):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
-                    
-        #comando gerais do computador: 
+
+        elif "refresh page" in comando:
+            teclado.press(Key.f5)
+            teclado.release(Key.f5)            
         
-        #Linux   
+    #Comando gerais do computador: 
         
-        elif "open terminal" in comando or "open commands" in comando:
+    #Linux   
+        
+        elif "open terminal" in comando:
             subprocess.Popen([terminal])
 
         elif "full screen" in comando or "disable full screen "  in comando:
@@ -753,19 +760,13 @@ def executar_comando(comando):
         elif "rename file" in comando or "rename folder" in comando:
             teclado.press(Key.f2)
             teclado.release(Key.f2)
-
-        elif "refresh page" in comando:
-            teclado.press(Key.f5)
-            teclado.release(Key.f5)
-
+            
         elif "termination option" in comando:
             with teclado.pressed(Key.ctrl, Key.alt):
                 teclado.press(Key.delete)
                 teclado.release(Key.delete)
 
-
-
-        # Windows
+    # Windows
         
         elif "show desktop" in comando or "hide desktop" in comando:
             with teclado.pressed(Key.win):
@@ -793,7 +794,7 @@ def executar_comando(comando):
                 teclado.release(Key.esc)
 
 
-        #Abos sistemas operacionais
+    #Abos sistemas operacionais
         
         elif "change window" in comando:
             with teclado.pressed(Key.alt):
@@ -854,7 +855,7 @@ def executar_comando(comando):
             teclado.press(Key.backspace)
             teclado.release(Key.backspace)
                     
-        elif "delete" in comando:
+        elif "to switch off" in comando:
             teclado.press(Key.backspace)
             teclado.release(Key.backspace)
 
@@ -883,6 +884,10 @@ def executar_comando(comando):
             teclado.press(Key.enter)
             teclado.release(Key.enter)
 
+        elif "delete" in comando:
+            teclado.press(Key.delete)
+            teclado.release(Key.delete)
+
         elif "open vs code" in comando:
             os.system("code")
                 
@@ -894,7 +899,7 @@ def executar_comando(comando):
             sys.exit()
 
 def main() -> None:
-    print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE (LINUX) ===")
+    print("=== ASSISTENTE DE ACESSIBILIDADE TRILÍNGUE ===")
     while True:
         comando_voz = ouvir_microfone()
         executar_comando(comando_voz)
